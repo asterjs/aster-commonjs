@@ -20,7 +20,8 @@ var commonjs = require('aster-commonjs');
 
 aster.src('src/**/*.js')
 .map(commonjs({
-  input: 'src/index.js'
+  input: 'src/index.js',
+  output: 'dist/bundle.js'
 }))
 .map(aster.dest('dist'))
 .subscribe(aster.runner);
